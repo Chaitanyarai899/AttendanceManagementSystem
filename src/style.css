@@ -1,0 +1,439 @@
+body {
+    margin: 0;
+}
+
+.pageLink{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.pageLink:hover{
+    color: #FFFFFF;
+}
+
+.login-bg {
+    width: 100%;
+    height: 100vh;
+    background-color: #041D53;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-inner {
+    width: 90vw;
+    height: 85vh;
+    background: #FFFFFF;
+    border-radius: 30px;
+    display: flex;
+}
+
+.login-left {
+    position: relative;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(226, 246, 254, 0.8), rgba(226, 246, 254, 0.8)), url(./img/usar.jfif);
+    background-size: cover;
+    border-radius: 30px 0px 0px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-h1 {
+    font-weight: 800;
+    font-size: 120px;
+    color: #041D53;
+    margin-top: 0;
+}
+
+.login-h2 {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 73px;
+    color: #181818;
+    margin-bottom: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+.dropdownBox{
+    width: 100%;
+    height: 50px;
+    background-color: #041D53;
+}
+
+.dropdownBox:hover{
+    background-color: #004679;
+}
+
+.dropdownBox:active{
+    background-color: #004679;
+}
+
+.login-right {
+    width: 40%;
+    height: 100%;
+    border-radius: 0px 30px 30px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+}
+
+.login-text {
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    color: #181818;
+}
+
+.login-box {
+    border-radius: 30px;
+}
+
+.login-btn {
+    height: 3rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    background-color: #004679;
+    border-radius: 30px;
+}
+
+.login-btn:hover {
+    transition: all 0.5s linear;
+    background-color: #041D53;
+    color: #FFFFFF;
+}
+
+/* /////////////////////////// Daily Attendance Page /////////////////////////// */
+
+.side-bar {
+    background-color: #041D53;
+    width: 350px;
+    height: 100vh;
+}
+
+.side-bar-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stud-name {
+    height: 8%;
+    width: 90%;
+    background: #004679;
+    border: 2px solid #FFFFFF;
+    border-radius: 40px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.stud-h3 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: #FFFFFF;
+}
+
+.side-bar p {
+    color: #EEEEEE;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.divider {
+    height: 3px;
+    width: 90%;
+    border: 0;
+    border-top: 2px solid #ffffff;
+}
+
+.active-btn {
+    width: 100%;
+    height: 60px;
+    background-color: #004679;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 36px;
+}
+
+.unactive-btn {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.active-btn button, .unactive-btn button{
+    border: none;
+    background: transparent;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 36px;
+}
+
+/* dashboard page */
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none
+}
+
+nav a:hover{
+    color: #fff;
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  background: rgb(226, 226, 226);
+}
+
+nav ul{
+    padding-left: 0px;
+}
+nav{
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  width: 90px;
+  
+  background: #290974;
+  overflow: hidden;
+  transition: 0.5s;
+}
+nav:hover{
+  width: 300px;
+  transition: 1s;
+}
+.logo{
+  display: flex;
+  margin: 10px 0 0 10px;
+  padding-bottom: 3rem;
+}
+
+.logo img{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.logo span{
+  font-weight: bold;
+  padding-left: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.cont a{
+  position: relative;
+  width: 280px;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  display: table;
+  padding: 10px;
+}
+nav .fas{
+  position: relative;
+  width: 70px;
+  height: 40px;
+  top: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+.nav-item{
+  position: relative;
+  top: 12px;
+  margin-left: 10px;
+}
+.cont a:hover{
+  background: rgb(196, 198, 232);
+}
+.cont a:hover i{
+  color: #041D53;
+  transition: 0.5s;
+}
+.logout{
+  position: absolute;
+  bottom: 0;
+}
+
+.cont{
+  display: flex;
+  gap: 10px;
+}
+
+
+
+
+
+.main{
+  position: relative;
+  width: 100%;
+}
+.main-top{
+  display: flex;
+  width: 100%;
+}
+.main-top{
+  padding: 20px;
+}
+.main-top i{
+  position: absolute;
+  right: 0;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+.main .users{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.users .card{
+  width: 450px;
+  height: 420px;
+  margin: 10px;
+  background: rgb(196, 198, 232);
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 35px rgba(11, 36, 221, 0.1);
+}
+.users .card img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.users .card h4{
+  text-transform: uppercase;
+}
+
+.users .card p{
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.users table{
+  margin:  auto;
+}
+
+.per{
+  margin-top: 2rem;
+}
+.users .per span{
+  padding: 25px;
+  border-radius: 18px;
+  background: rgb(223, 223, 223);
+}
+.users td{
+  font-size: 16px;
+  padding-right: 15px;
+}
+.users .card button{
+  width: 100%;
+  margin-top: 18px;
+  padding: 7px;
+  cursor: pointer;
+  border-radius: 10px;
+  background: transparent;
+  border: 2px solid #4a53d4;
+}
+.users .card button:hover{
+  background: #041D53;
+  color: #fff;
+  transition: 0.5s;
+}
+
+
+.attendance{
+  /* margin-top: 20px; */
+  width: 100%;
+  padding: 20px;
+  text-transform: capitalize;
+}
+.attendance-list{
+  padding: 10px;
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(104, 112, 224, 0.87);
+}
+.table{
+  width: 90%;
+  /* margin: 25px 0; */
+  font-size: 15px;
+  min-width: 100%;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+}
+table thead tr{
+  color: #fff;
+  background: #041D53;
+  text-align: left;
+  font-weight: bold;
+}
+.table th,
+.table td{
+  padding: 12px 15px;
+}
+.table tbody tr{
+  border-bottom: 1px solid #ddd;
+}
+.table tbody tr:nth-of-type(odd){
+  background: #f3f3f3;
+}
+.table tbody tr.active{
+  font-weight: bold;
+  color: #041D53;
+}
+.table tbody tr:last-of-type{
+  border-bottom: 2px solid #041D53;
+}
+.table button{
+  padding: 6px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #041D53;
+}
+.table button:hover{
+  background: #d3340d;
+  color: #fff;
+  transition: 0.5rem;
+}
