@@ -92,6 +92,18 @@ app.post("/api/classes", (req, res)=>{
 })
 
 
+app.get("/api/students", (req, res)=>{
+
+    connection.query(`SELECT enrollmentNO, name from edcStudents where  edcStudents.course IN (select edcBatchAllocation.course from edcBatchAllocation where batch_id = ?) AND  edcStudents.stream IN (select edcBatchAllocation.stream from edcBatchAllocation where batch_id = ?);`,
+    [req.body.batch, req.body.batch],
+    function(error, result){
+        if(error){
+            throw error;
+        }else{
+            res.send(result);
+        }
+    })
+})
 
 app.listen(8080, (req, res)=> {
     console.log("Server listening on port 8080");
