@@ -6,13 +6,20 @@ const mysql = require("mysql");
 
 const app = express();
 
+
+
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
+
 app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-var connection = mysql.createConnection({
+app.use(bodyParser.json());
+app.use(express.json());
+  
+
+const connection = mysql.createConnection({
     host     : process.env.HOST,
     port     : process.env.PORT,
     user     : process.env.USER,
@@ -39,6 +46,20 @@ app.get("/api/allStudents", (req, res)=>{
         }
     })
 })
+
+app.post("/api/employee", (req, res)=>{
+    
+    connection.query(`SELECT name, designation, date_of_joining FROM edcEmployee WHERE instructor_id = ? AND password = ?`, 
+    [req.body.id, req.body.password],
+    function(error, result){
+        if(error){
+            throw error;
+        }else{
+            res.send(result);         
+        }
+    }
+    )
+});
 
 
 app.listen(8080, (req, res)=> {
