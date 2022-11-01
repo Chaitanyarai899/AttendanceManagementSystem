@@ -70,13 +70,20 @@ app.get("/api/attendanceStats", (req, res)=>{
         if(error){
             throw error;
         }else{
-            if(result===1){
-                res.send({message: "Present"});
-            }
+            var status = checkAttendanceStats(JSON.stringify(result[0].PA))
+            res.send({message: status});
+
         }
     })
 })
 
+function checkAttendanceStats(status){
+    console.log(status);
+    if(status!==0){
+        status = "present";
+        return status;
+    }
+}
 
 //APP API's
 app.post("/api/employee", (req, res)=>{
