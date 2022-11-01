@@ -220,7 +220,7 @@ nav a:hover{
   font-family: "Poppins", sans-serif;
 }
 body{
-  background: rgb(226, 226, 226);
+  background: #fff;
 }
 
 nav ul{
@@ -234,7 +234,7 @@ nav{
   left: 0;
   width: 90px;
   
-  background: #290974;
+  background: #041D53;
   overflow: hidden;
   transition: 0.5s;
 }
@@ -271,13 +271,11 @@ nav .fas{
   position: relative;
   width: 70px;
   height: 40px;
-  top: 20px;
   font-size: 20px;
   text-align: center;
 }
 .nav-item{
   position: relative;
-  top: 12px;
   margin-left: 10px;
 }
 .cont a:hover{
@@ -290,6 +288,8 @@ nav .fas{
 .logout{
   position: absolute;
   bottom: 0;
+  color: #fff;
+  display: flex;
 }
 
 .cont{
@@ -354,7 +354,7 @@ nav .fas{
 }
 
 .per{
-  margin-top: 2rem;
+  margin-top: 1.1rem;
 }
 .users .per span{
   padding: 25px;
