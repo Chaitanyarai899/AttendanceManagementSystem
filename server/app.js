@@ -62,6 +62,21 @@ app.get("/api/attendance", (req, res)=>{
     })
 })
 
+app.get("/api/attendanceStats", (req, res)=>{
+    console.log("Working fine");
+    connection.query(`SELECT PA FROM attendance WHERE Enrollement_no = ? AND periodID=?`,
+    [req.body.enroll, req.body.period],
+    function(error, result){
+        if(error){
+            throw error;
+        }else{
+            if(result===1){
+                res.send({message: "Present"});
+            }
+        }
+    })
+})
+
 
 //APP API's
 app.post("/api/employee", (req, res)=>{
@@ -104,6 +119,8 @@ app.get("/api/students", (req, res)=>{
         }
     })
 })
+
+
 
 app.listen(8080, (req, res)=> {
     console.log("Server listening on port 8080");
