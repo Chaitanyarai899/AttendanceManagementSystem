@@ -62,6 +62,18 @@ app.get("/api/attendance", (req, res)=>{
     })
 })
 
+app.post("/api/student", (req, res)=>{
+    connection.query(`SELECT name FROM edcStudents WHERE enrollmentNo = ?`,
+    [req.body.enroll],
+    function(error, result){
+        if(error){
+            throw error;
+        }else{
+            res.send(result);
+        }
+    })
+})
+
 app.get("/api/attendanceStats", (req, res)=>{
     console.log("Working fine");
     connection.query(`SELECT PA FROM attendance WHERE Enrollement_no = ? AND periodID=?`,
@@ -70,13 +82,20 @@ app.get("/api/attendanceStats", (req, res)=>{
         if(error){
             throw error;
         }else{
-            if(result===1){
-                res.send({message: "Present"});
-            }
+            var status = checkAttendanceStats(JSON.stringify(result[0].PA))
+            res.send({message: status});
+
         }
     })
 })
 
+function checkAttendanceStats(status){
+    console.log(status);
+    if(status!==0){
+        status = "present";
+        return status;
+    }
+}
 
 //APP API's
 app.post("/api/employee", (req, res)=>{
