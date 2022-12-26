@@ -41,8 +41,9 @@ function Navbar() {
             </a></li> */}
 
             <li className='logout mb-3'>
-              <Link className='pageLink w-75' to="/"><i className="fas fa-sign-out-alt"></i></Link>
-              <span className="logout-text w-100">Logout</span>
+              <Link className='pageLink w-200' to="/"><i className="fas fa-sign-out-alt"></i>
+              <span className="logout-text w-100"> Logout</span>
+              </Link>
             </li>
           </ul>
         </nav>
