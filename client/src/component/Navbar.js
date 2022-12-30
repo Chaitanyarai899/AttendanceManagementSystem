@@ -29,9 +29,9 @@ function Navbar() {
             </a>
             </li> */}
 
-            <li><Link className='pageLink' to="/report">
-              <i className="fas fa-database"></i>
-              <span className="nav-item">Report</span>
+            <li><Link className='pageLink' to="/calender">
+              <i className="fas fa-clock"></i>
+              <span className="nav-item">Calendar</span>
             </Link></li>
 
 
