@@ -32,8 +32,10 @@ router.get("/api/attendance", (req, res)=>{
 })
 
 router.post("/api/student", (req, res)=>{
+    const enroll = req.body.enroll;
+
     connection.query(`SELECT * FROM student WHERE enrollment_no = ?`,
-    [req.body.enroll],
+    [enroll],
     function(error, result){
         if(error){
             throw error;
