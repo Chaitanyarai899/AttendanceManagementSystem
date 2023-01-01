@@ -2,6 +2,8 @@ import React from 'react'
 import './../style.css'
 import Profile from "../img/user.png"
 import Navbar from '../component/Navbar'
+import { Link } from 'react-router-dom'
+import Button from "react-bootstrap/Button";
 
 const Dashboard = () => {
   return (
@@ -35,6 +37,10 @@ const Dashboard = () => {
                     <td>Year</td>
                   </tr>
                 </table>
+              </div>
+              <div className='d-flex justify-content-center'>
+              <Link className='pageLink' to="/about"><Button className='profile-btn w-100' variant="outline-light" size="md">View Profile
+              </Button></Link>
               </div>
             </div>
 

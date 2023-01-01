@@ -236,17 +236,17 @@ nav {
   bottom: 0;
   height: 100vh;
   left: 0;
-  width: 90px;
+  width: 250px;
 
   background: #041D53;
   overflow: hidden;
   transition: 0.5s;
 }
 
-nav:hover {
+/* nav:hover {
   width: 300px;
   transition: 1s;
-}
+} */
 
 .logo {
   display: flex;
@@ -290,12 +290,11 @@ nav .fas {
 }
 
 .cont a:hover {
-  background: rgb(196, 198, 232);
+  color: #ffcb04;
 }
 
-.cont a:hover i {
-  color: #041D53;
-  transition: 0.5s;
+.nav-first:hover{
+  color: #fff;
 }
 
 .logout {
@@ -346,12 +345,13 @@ nav .fas {
 
 .users .card {
   width: 500px;
-  height: 400px;
+  height: 450px;
   margin: 10px;
   text-align: center;
   border-radius: 10px;
   padding: 10px;
   overflow: hidden;
+  background-color: #E2F6FE;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -384,6 +384,10 @@ nav .fas {
   background: #004679;
   color: #fff;
 }
+.users .per span:hover {
+  background-color: #041D53;
+  transition: 0.5s;
+}
 
 .users .per td {
   color: gainsboro;
@@ -394,17 +398,17 @@ nav .fas {
 .users .card button {
   width: 100%;
   margin-top: 18px;
-  padding: 7px;
   cursor: pointer;
   border-radius: 10px;
   background-color: #004679;
   color: #fff;
   border: 2px solid #004679;
+  font-weight: 500;
 }
 
 .users .card button:hover {
-  background: #fff;
-  color: #000;
+  background: #041D53;
+  color: #ffcb04;
   transition: 0.5s;
 }
 
@@ -434,7 +438,7 @@ nav .fas {
 }
 
 table thead tr {
-  color: #fff;
+  color: #ffcb04;
   background: #041D53;
   text-align: left;
   font-weight: bold;
@@ -450,8 +454,8 @@ table thead tr {
   border-bottom: 1.5px solid #ddd;
 }
 
-.table tbody tr:nth-of-type(odd) {
-  background: #fff;
+.table tbody tr:hover{
+  background-color: #E2F6FE;
 }
 
 .table tbody tr.active {

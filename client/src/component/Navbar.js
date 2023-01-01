@@ -8,9 +8,9 @@ function Navbar() {
     <>
     <nav>
           <ul>
-            <li className='pb-4 logo-li'><a className="logo">
+            <li className='pb-4 logo-li my-2'><a className="logo">
               <img src={Logo} />
-              <span className="nav-item">Student</span>
+              <span className="nav-item nav-first">STUDENT</span>
             </a></li>
             <li><Link className='pageLink' to="/dashboard">
               <i className="fas fa-menorah"></i>
