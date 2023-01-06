@@ -412,6 +412,13 @@ nav .fas {
   transition: 0.5s;
 }
 
+.calendar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 20px;
+}
 
 .attendance {
   /* margin-top: 20px; */

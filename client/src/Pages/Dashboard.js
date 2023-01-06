@@ -4,6 +4,7 @@ import Profile from "../img/user.png"
 import Navbar from '../component/Navbar'
 import { Link } from 'react-router-dom'
 import Button from "react-bootstrap/Button";
+import App from '../component/Calendar/App'
 
 const Dashboard = () => {
   return (
@@ -44,9 +45,13 @@ const Dashboard = () => {
               </div>
             </div>
 
+            <div className='calendar'>
+            <App />
+            </div>
+            
 
 
-
+          </div>
             <div className="attendance">
               <div className="attendance-list">
                 <table className="table">
@@ -112,7 +117,6 @@ const Dashboard = () => {
           </div>
         </div>
 
-      </div>
     </>
   )
 }
