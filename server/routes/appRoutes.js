@@ -52,20 +52,52 @@ router.post("/api/classes", (req, res)=>{
             res.send(result);
         }
     })
+
 })
 
 
-router.get("/api/students", (req, res)=>{
+router.post("/api/students", (req, res)=>{
 
-    connection.query(`SELECT enrollmentNO, name from edcStudents where  edcStudents.course IN (select edcBatchAllocation.course from edcBatchAllocation where batch_id = ?) AND  edcStudents.stream IN (select edcBatchAllocation.stream from edcBatchAllocation where batch_id = ?);`,
-    [req.body.batch, req.body.batch],
-    function(error, result){
-        if(error){
-            throw error;
-        }else{
-            res.send(result);
-        }
-    })
+    const batch = req.body.batch_id;
+
+    try{
+        connection.query(`SELECT Enrollment_no, name from student where  student.course IN (select batch_allocation.course from batch_allocation where batch_id = ?) AND  student.stream IN (select batch_allocation.stream from batch_allocation where batch_id = ?);`,
+        [batch, batch],
+        function(error, result){
+            if(error){
+                throw error;
+            }else{
+                res.send(result);
+            }
+        })
+    }catch(e){
+        res.status(500).send({message: "Internal Server Error"});
+    }
+    
+})
+
+router.post("/api/generatePId", (req, res)=>{
+    
+    const instructor_id = req.body.instructor_id;
+    const subject_code = req.body.code;
+    const batch_id = req.body.batchId;
+    const stamp = req.body.stamp;
+    const pid = instructor_id.concat(subject_code, batch_id, stamp);
+    try{
+        connection.query(`INSERT INTO period_id (instructor_id, subject_code, batch_id, stamp) VALUES (?, ?, ?, ?)`,
+        [instructor_id, subject_code, batch_id, stamp],
+        function(error, result){
+            if(error){
+                throw error;
+            }else{
+                res.send({message: "Period details added"})
+            }
+        })
+    }catch(e){
+        console.log(e);
+        res.status(500).send("Internal Server Error");
+    }
+    
 })
 
 module.exports = router;
