@@ -293,6 +293,10 @@ nav .fas {
   color: #ffcb04;
 }
 
+.cont .nav-first:hover {
+  color: #fff;
+}
+
 .nav-first:hover{
   color: #fff;
 }

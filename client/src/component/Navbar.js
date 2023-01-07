@@ -8,9 +8,9 @@ function Navbar() {
     <>
     <nav>
           <ul>
-            <li className='pb-4 logo-li my-2'><a className="logo">
+            <li className='pb-4 logo-li my-2'><a className="logo nav-first">
               <img src={Logo} />
-              <span className="nav-item nav-first">STUDENT</span>
+              <span className="nav-item">STUDENT</span>
             </a></li>
             <li><Link className='pageLink' to="/dashboard">
               <i className="fas fa-menorah"></i>
@@ -29,10 +29,10 @@ function Navbar() {
             </a>
             </li> */}
 
-            <li><Link className='pageLink' to="/calender">
+            {/* <li><Link className='pageLink' to="/calender">
               <i className="fas fa-clock"></i>
               <span className="nav-item">Calendar</span>
-            </Link></li>
+            </Link></li> */}
 
 
             {/* <li><a href="#">
