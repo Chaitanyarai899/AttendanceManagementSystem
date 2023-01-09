@@ -33,16 +33,23 @@ router.get("/api/attendance", (req, res)=>{
 
 router.post("/api/student", (req, res)=>{
     const enroll = req.body.enroll;
-
-    connection.query(`SELECT * FROM student WHERE enrollment_no = ?`,
-    [enroll],
-    function(error, result){
-        if(error){
-            throw error;
-        }else{
-            res.send(result);
-        }
-    })
+    try{
+        connection.query(`SELECT * FROM student WHERE enrollment_no = ?`,
+        [enroll],
+        function(error, result){
+            if(error){
+                throw error;
+            }else if(result[0] == null){
+                res.status(400).json({message: "Student with this enrollement no. doesn't exist"});
+            }
+            else{
+                res.json({message:"Success", data: result});
+            }
+        })
+    }catch(e){
+        res.status(500).send({message: 'Internal server error!'})
+    }
+    
 })
 
 router.get("/api/attendanceStats", (req, res)=>{
